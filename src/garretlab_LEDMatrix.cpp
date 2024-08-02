@@ -25,7 +25,6 @@ void garretlab_LEDMatrix::endDraw() {
 // Clear display.
 void garretlab_LEDMatrix::clear() {
   garretlab_ArduinoGraphics::clear();
-  ArduinoLEDMatrix::clear();
 }
 
 // Stroke.
@@ -46,7 +45,6 @@ void garretlab_LEDMatrix::rect(int x, int y, int width, int height) {
 // Display text.
 void garretlab_LEDMatrix::text(const String &str, int x, int y) {
   garretlab_ArduinoGraphics::text(str, x, y);
-  return;
 }
 
 // Set text font.
@@ -92,7 +90,7 @@ void garretlab_LEDMatrix::endText(int scrollDirection) {
 
 // Set text scroll speed.
 void garretlab_LEDMatrix::textScrollSpeed(unsigned long scrollSpeed) {
-  ArduinoLEDMatrix::textScrollSpeed(scrollSpeed);
+  garretlab_ArduinoGraphics::textScrollSpeed(scrollSpeed);
 }
 
 // Print.

@@ -39,7 +39,7 @@ class garretlab_LEDMatrix : public ArduinoLEDMatrix, public garretlab_ArduinoGra
   int textBufferLength;                    // Text buffer length, not the memory size.
   int textX;                               // X position of text.
   int textY;                               // Y position of text.
-  const struct Font* font = &Font_Misaki;  // Font name.
+  struct garretlab_Font font;  // Font name.
   static const int canvasWidth = 12;       // Canvas width.
   static const int canvasHeight = 8;       // Canvas height.
 
