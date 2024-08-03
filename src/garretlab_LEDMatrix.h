@@ -20,6 +20,10 @@ class garretlab_LEDMatrix : public ArduinoLEDMatrix, public garretlab_ArduinoGra
   void clear();                                                   // Clear display.
   void stroke(uint8_t r, uint8_t g, uint8_t b);                   // Stroke.
   void stroke(uint32_t color);                                    // Stroke.
+  void circle(int x, int y, int diameter);                        // Circle.
+  void ellipse(int x, int y, int width, int height);              // Ellipse.
+  void line(int x1, int y1, int x2, int y2);                      // Line.
+  void point(int x, int y);                                       // Point.
   void rect(int x, int y, int width, int height);                 // Draw a rectangle.
   void text(const String& str, int x = 0, int y = 0);             // Display text.
   void textFont(const Font& which);                               // Set text font.
@@ -35,13 +39,13 @@ class garretlab_LEDMatrix : public ArduinoLEDMatrix, public garretlab_ArduinoGra
   size_t println(const char* s);                                  // Print.
 
  protected:
-  String textBuffer;                       // Buffer to hold text.
-  int textBufferLength;                    // Text buffer length, not the memory size.
-  int textX;                               // X position of text.
-  int textY;                               // Y position of text.
-  struct garretlab_Font font;  // Font name.
-  static const int canvasWidth = 12;       // Canvas width.
-  static const int canvasHeight = 8;       // Canvas height.
+  String textBuffer;                  // Buffer to hold text.
+  int textBufferLength;               // Text buffer length, not the memory size.
+  int textX;                          // X position of text.
+  int textY;                          // Y position of text.
+  struct garretlab_Font font;         // Font name.
+  static const int canvasWidth = 12;  // Canvas width.
+  static const int canvasHeight = 8;  // Canvas height.
 
   virtual void bitmap(const uint8_t* data, int x, int y, int width, int height);  // Bitmap.
 };

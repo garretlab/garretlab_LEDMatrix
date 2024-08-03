@@ -37,6 +37,26 @@ void garretlab_LEDMatrix::stroke(uint32_t color) {
   ArduinoLEDMatrix::stroke(color);
 }
 
+// Circle.
+void garretlab_LEDMatrix::circle(int x, int y, int diameter) {
+  ArduinoLEDMatrix::circle(x, y, diameter);
+}
+
+// Ellipse.
+void garretlab_LEDMatrix::ellipse(int x, int y, int width, int height) {
+  ArduinoLEDMatrix::ellipse(x, y, width, height);
+}
+
+// Line.
+void garretlab_LEDMatrix::line(int x1, int y1, int x2, int y2) {
+  ArduinoLEDMatrix::line(x1, y1, x2, y2);
+}
+
+// Point.
+void garretlab_LEDMatrix::point(int x, int y) {
+  ArduinoLEDMatrix::point(x, y);
+}
+
 // Draw a rectangle.
 void garretlab_LEDMatrix::rect(int x, int y, int width, int height) {
   ArduinoLEDMatrix::rect(x, y, width, height);
